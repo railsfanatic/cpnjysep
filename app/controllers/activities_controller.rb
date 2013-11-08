@@ -5,10 +5,6 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
-    @client = Rails.cache.fetch("instagram") do
-      Instagram.client(:access_token => Settings.where(name: "instagram_access_token").first.value)
-    end
-    @media = @client.user_recent_media(777)
   end
 
   # GET /activities/1

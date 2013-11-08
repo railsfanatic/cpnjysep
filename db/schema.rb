@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131108053308) do
+ActiveRecord::Schema.define(version: 20131108085917) do
 
   create_table "activities", force: true do |t|
     t.string   "title"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 20131108053308) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "grams", force: true do |t|
+    t.string   "media_id"
+    t.string   "media_type"
+    t.string   "link"
+    t.string   "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "low_res"
+    t.string   "standard_res"
   end
 
   create_table "settings", force: true do |t|

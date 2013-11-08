@@ -3,23 +3,6 @@
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
 
-<div class="cycle-slideshow" 
-    data-cycle-fx="carousel"
-    data-cycle-timeout="3000"
-    data-cycle-carousel-fluid="false"
-    data-cycle-slides="> a"
-    >
-  <% for item in @media %>
-  <%= link_to image_tag(item.images.low_resolution.url), item.link %>
-  <% if 1 == 2 %>
-  <p>
-    id, type, created_time, link, caption.text:<br />
-    <%= "#{item.id}, #{item.type}, #{DateTime.strptime(item.created_time, '%s').strftime('%D %l:%M %p')}, #{item.link}, #{item.caption.text}" %>
-  </p>
-  <% end # if 1 == 2 %>
-  <% end %>
-</div>
-
 <table class="table table-striped">
   <thead>
     <tr>
