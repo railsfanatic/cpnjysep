@@ -6,7 +6,7 @@ class Gram < ActiveRecord::Base
     client.user_recent_media(user_id).each do |media|
       unless exists?(media_id: media.id)
         create!(
-          media_id: media.id,
+          media_id: media.id.to_s,
           media_type: media.type,
           created_at: DateTime.strptime(media.created_time, '%s'),
           link: media.link,
