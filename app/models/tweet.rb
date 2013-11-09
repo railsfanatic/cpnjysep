@@ -5,7 +5,8 @@ class Tweet < ActiveRecord::Base
         create!(
           tweet_id: tweet.id,
           content: tweet.text,
-          screen_name: tweet.user.screen_name
+          screen_name: tweet.user.screen_name,
+          created_at: tweet.created_at
         )
       end
     end
