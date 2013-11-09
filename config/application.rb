@@ -14,10 +14,27 @@ module Cpnjysep
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Mountain Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    
+    console do
+      AwesomePrint.pry!
+    
+      Hirb.enable
+    
+      old_print = Pry.config.print
+      Pry.config.print = proc do |output, value|
+        if value.is_a? ActiveRecord::Relation
+          Hirb::View.view_or_page_output(value)
+        else
+          old_print.call(output, value)
+        end
+      end
+    
+      config.console = Pry
+    end
   end
 end
