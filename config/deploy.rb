@@ -10,6 +10,7 @@ load "config/recipes/check"
 
 server "198.199.115.184", :web, :app, :db, primary: true
 
+set :github_user, "railsfanatic"
 set :user, "deployer"
 set :application, "cpnjysep"
 set :deploy_to, "/home/#{user}/apps/#{application}"
@@ -17,7 +18,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:ryanb/#{application}.git"
+set :repository, "git@github.com:#{github_user}/#{application}.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
