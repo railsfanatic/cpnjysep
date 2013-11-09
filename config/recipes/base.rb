@@ -10,6 +10,9 @@ end
 namespace :deploy do
   desc "Install everything onto the server"
   task :install do
+    # Disable root ssh login
+    run "#{sudo} sed -i 's/#PermitRootLogin/PermitRootLogin/g' /etc/ssh/sshd_config"
+    run "#{sudo} sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config"
     run "#{sudo} apt-get -y update"
     run "#{sudo} apt-get -y install python-software-properties"
   end
