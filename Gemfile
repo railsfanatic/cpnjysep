@@ -10,11 +10,9 @@ gem 'pg', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
-group :development do
-  gem 'hirb'
-  gem 'pry'
-  gem 'awesome_print'
-end
+gem 'hirb'
+gem 'pry'
+gem 'awesome_print'
 
 gem 'therubyracer', platforms: :ruby
 gem 'less-rails'
