@@ -19,7 +19,7 @@
       <tr>
         <td><%= link_to activity.id, activity %></td>
         <td><%= link_to activity.title, activity %></td>
-        <td><%= activity.starts_at.try(:strftime, "%D %H:%M %p") %></td>
+        <td><%= activity.starts_at.try(:strftime, "%D %l:%M %p") %></td>
         <td><%= activity.duration %></td>
         <td><%= activity.description %></td>
         <td>

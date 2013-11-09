@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109142424) do
+ActiveRecord::Schema.define(version: 20131109231922) do
 
   create_table "activities", force: true do |t|
     t.string   "title"
@@ -42,6 +42,9 @@ ActiveRecord::Schema.define(version: 20131109142424) do
     t.string   "standard_res"
   end
 
+  add_index "grams", ["created_at"], name: "index_grams_on_created_at"
+  add_index "grams", ["media_id"], name: "index_grams_on_media_id"
+
   create_table "settings", force: true do |t|
     t.string   "name"
     t.string   "value"
@@ -56,5 +59,8 @@ ActiveRecord::Schema.define(version: 20131109142424) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "tweets", ["created_at"], name: "index_tweets_on_created_at"
+  add_index "tweets", ["tweet_id"], name: "index_tweets_on_tweet_id"
 
 end
