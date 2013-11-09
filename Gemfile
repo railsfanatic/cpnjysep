@@ -11,14 +11,15 @@ gem 'pg', group: :production
 gem 'sass-rails', '~> 4.0.0'
 
 group :development do
-  gem 'therubyracer', platforms: :ruby
-  gem 'less-rails'
-  gem 'twitter-bootstrap-rails'
-  gem 'cycle2-rails', git: 'git://github.com/thinkswan/cycle2-rails.git', branch: 'rails4'
   gem 'hirb'
   gem 'pry'
   gem 'awesome_print'
 end
+
+gem 'therubyracer', platforms: :ruby
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'cycle2-rails', git: 'git://github.com/thinkswan/cycle2-rails.git', branch: 'rails4'
 
 gem 'simple_form'
 gem 'instagram'
