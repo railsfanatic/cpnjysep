@@ -15,10 +15,18 @@ group :development do
   gem 'less-rails'
   gem 'twitter-bootstrap-rails'
   gem 'cycle2-rails', git: 'git://github.com/thinkswan/cycle2-rails.git', branch: 'rails4'
+  gem 'hirb'
+  gem 'pry'
+  gem 'awesome_print'
 end
 
 gem 'simple_form'
 gem 'instagram'
+gem 'htmlentities'
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
+
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -33,6 +41,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 gem 'jquery-turbolinks'
+
+gem 'twitter'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

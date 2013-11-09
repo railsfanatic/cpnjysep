@@ -14,5 +14,9 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require jquery.cycle2.all
+//= require jquery.cycle2
+//= require jquery.cycle2.carousel
+//= require jquery.cycle2.swipe
+//= require bootstrap-datepicker
 //= require turbolinks
+//= require_tree

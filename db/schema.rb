@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131108085917) do
+ActiveRecord::Schema.define(version: 20131108103215) do
 
   create_table "activities", force: true do |t|
     t.string   "title"
     t.datetime "starts_at"
     t.integer  "length_in_minutes"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.string   "permalink"
+    t.text     "content"
+    t.boolean  "published"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +45,14 @@ ActiveRecord::Schema.define(version: 20131108085917) do
   create_table "settings", force: true do |t|
     t.string   "name"
     t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tweets", force: true do |t|
+    t.string   "tweet_id"
+    t.string   "screen_name"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -48,14 +48,16 @@
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
-@baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        20px;
+@baseFontSize:          14pt;
+@baseFontFamily:        'Cabin', @sansFontFamily;
+@baseLineHeight:        16pt;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    'Lobster', cursive; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    'Galindo', cursive; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
+
+@brandFontFamily:       'Galindo', cursive; // empty to use BS default, @baseFontFamily
 
 
 // Component sizing
@@ -172,7 +174,7 @@
 
 // Wells
 // -------------------------
-@wellBackground:                  #3CB9C6;
+@wellBackground:                  #080;
 
 
 // Navbar
@@ -181,16 +183,16 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    50px;
-@navbarBackgroundHighlight:       @red;
-@navbarBackground:                @red;
+@navbarBackgroundHighlight:       @white;
+@navbarBackground:                @yellow;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      @white;
-@navbarLinkColor:                 @white;
+@navbarText:                      @red;
+@navbarLinkColor:                 @red;
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @navbarLinkColorHover;
-@navbarLinkBackgroundHover:       lighten(@navbarBackground, 10%);
-@navbarLinkBackgroundActive:      lighten(@navbarBackground, 10%);
+@navbarLinkBackgroundHover:       #93f;
+@navbarLinkBackgroundActive:      @green;
 
 @navbarBrandColor:                @navbarLinkColor;
 
