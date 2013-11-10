@@ -13,7 +13,7 @@ class Gram < ActiveRecord::Base
           link: media.link,
           low_res: media.images.low_resolution.url,
           standard_res: media.images.standard_resolution.url,
-          caption: media.caption.text.to_s
+          caption: media.caption.try(:text)
         )
       end
     end
