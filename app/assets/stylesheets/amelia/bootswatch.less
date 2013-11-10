@@ -106,6 +106,16 @@ hr {
 		padding-bottom: 14px;
 		text-shadow: none;
     height: 22px;
+    color: @navbarLinkColor !important;
+	}
+
+	.nav > li > a:hover {
+    color: @navbarLinkColorHover !important;
+    background: @navbarLinkBackgroundHover !important;
+	}
+
+	.nav > li.active > a {
+    color: @navbarLinkColorActive !important;
 	}
 
 	.nav > .active > a,
@@ -127,6 +137,7 @@ hr {
 	.navbar-text {
 		margin: 17px 15px 14px;
 		line-height: 20px;
+    color: @navbarText;
 	}
 
 	.btn,

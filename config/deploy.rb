@@ -8,6 +8,7 @@ load "config/recipes/nodejs"
 load "config/recipes/rails"
 load "config/recipes/rbenv"
 load "config/recipes/check"
+load "config/recipes/api_keys"
 
 server "198.199.115.184", :web, :app, :db, primary: true
 
