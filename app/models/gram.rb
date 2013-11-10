@@ -1,7 +1,8 @@
 class Gram < ActiveRecord::Base
   def self.pull_grams
     access_token = Settings.where(name: "instagram_access_token").first.value
-    user_id = Settings.where(name: "instagram_user_id").first.value
+    # user_id = Settings.where(name: "instagram_user_id").first.value
+    user_id = '645086162'
     client = Instagram.client(:access_token => access_token)
     client.user_recent_media(user_id).each do |media|
       unless exists?(media_id: media.id)

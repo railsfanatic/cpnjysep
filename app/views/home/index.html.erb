@@ -27,7 +27,7 @@
       <% Tweet.order("tweet_id desc").limit(3).each do |tweet| %>
       <blockquote>
         <p><%= HTMLEntities.new.decode tweet.content %></p>
-        <small>@<%= tweet.screen_name %></small>
+        <small><%= time_ago_in_words tweet.created_at %> ago</small>
       </blockquote>
       <% end %>
     </div><!--/.well -->

@@ -5,6 +5,18 @@ namespace :social do
     Tweet.pull_tweets
   end
   
+  desc "Clear Tweets Cache"
+  task clear_tweets: :environment do
+    puts "Clearning Tweets cache ..."
+    Tweet.delete_all
+  end
+  
+  desc "Clear Instagram Cache"
+  task clear_grams: :environment do
+    puts "Clearing Instagram cache ..."
+    Gram.delete_all
+  end
+  
   desc "Update Instagram"
   task pull_grams: :environment do
     puts "Updating Instagram media ..."
