@@ -14,3 +14,6 @@
  *= require bootstrap-select.min
  *= require font-awesome
  */
+
+body { padding-top: 49px; }
+

@@ -1,3 +1,44 @@
+<div class="row hidden-xs">
+  <div class="col-lg-8" style="margin-left: -30px;">
+    <table id="JYSEP_Banner" width="1200" border="0" cellpadding="0" cellspacing="0">
+    	<tr>
+    		<td colspan="3">
+          <%= image_tag "banner/JYSEP-Banner_01.jpg" %>
+        </td>
+    		<td rowspan="3">
+          <div class="cycle-slideshow" data-cycle-fx="fadeout">
+          <% 1.upto(4) do |i| %>
+          <%= image_tag "banner/junior-youth-#{i}.jpg", { style: (i > 1) ? "display: none" : nil } %>
+          <% end %>
+          </div>
+        </td>
+    	</tr>
+    	<tr>
+    		<td rowspan="2">
+          <%= image_tag "banner/JYSEP-Banner_03.jpg" %>
+    		</td>
+        <td>
+          <div class="cycle-slideshow" data-cycle-fx="tileSlide">
+          <%= image_tag "banner/jysep-off.jpg" %>
+          <%= image_tag "banner/jysep-on.jpg", { style: "display: none" } %>
+          </div>
+        </td>
+    		<td rowspan="2">
+          <%= image_tag "banner/JYSEP-Banner_05.jpg" %>
+        </td>
+    	</tr>
+    	<tr>
+    		<td>
+          <div class="cycle-slideshow" data-cycle-fx="fadeout">
+          <%= image_tag "banner/empowering-off.jpg" %>
+          <%= image_tag "banner/empowering-on.jpg", { style: "display: none" } %>
+          </div>
+        </td>
+    	</tr>
+    </table>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-lg-8">
       <div class="alert alert-danger">
