@@ -17,6 +17,7 @@
 //= require jquery.cycle2
 //= require jquery.cycle2.carousel
 //= require jquery.cycle2.swipe
+//= require jquery.cycle2.tile
 //= require bootstrap-datepicker
 //= require wymeditor/jquery.wymeditor
 //= require wymeditor/jquery.browser
