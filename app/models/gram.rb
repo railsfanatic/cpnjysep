@@ -1,10 +1,13 @@
 class Gram < ActiveRecord::Base
-  def self.pull_grams
+  def self.refresh
     access_token = Settings.where(name: "instagram_access_token").first.value
     # user_id = Settings.where(name: "instagram_user_id").first.value
     user_id = '645086162'
     client = Instagram.client(:access_token => access_token)
-    client.user_recent_media(user_id).each do |media|
+    media = client.user_recent_media(user_id)
+    
+    # add new media to cache
+    media.each do |media|
       unless exists?(media_id: media.id)
         create!(
           media_id: media.id.to_s,
@@ -17,5 +20,9 @@ class Gram < ActiveRecord::Base
         )
       end
     end
+    
+    # remove deleted media from cache
+    ids_to_delete = Gram.pluck(:media_id) - media.collect(&:id)
+    Gram.where(media_id: ids_to_delete).delete_all
   end
 end

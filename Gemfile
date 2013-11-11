@@ -22,10 +22,9 @@ gem 'cycle2-rails', git: 'git://github.com/thinkswan/cycle2-rails.git', branch: 
 gem 'simple_form'
 gem 'instagram'
 gem 'htmlentities'
-gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
-                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails', :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 
-
+gem 'whenever', require: false
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
