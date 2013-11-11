@@ -31,7 +31,7 @@ gem 'rails_autolink'
 
 gem 'redis_analytics'
 
-gem 'font-awesome-less'
+gem 'font-awesome-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

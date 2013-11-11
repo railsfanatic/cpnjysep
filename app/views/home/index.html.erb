@@ -42,7 +42,7 @@
 <div class="row">
   <div class="col-lg-8">
       <div class="alert alert-danger">
-        <h4 style="margin-bottom: 10px"><i class="icon-instagram"></i> Instagram Feed</h4>
+        <h4 style="margin-bottom: 10px"><%= fa_icon "instagram" %> Instagram Feed</h4>
         <div style="border-radius: 10px;" class="cycle-slideshow" 
           data-cycle-fx="carousel"
           data-cycle-timeout="3000"
@@ -63,7 +63,7 @@
         </div><!--/.cycle-slideshow-->
       </div><!--/.well-->
       <div class="alert alert-info">
-          <h4><i class="icon-pencil"></i> <%= @article.title %></h4>
+          <h4><%= fa_icon "pencil" %> <%= @article.title %></h4>
           <%= simple_format (truncate(@article.content, length: 750, separator: " ") { link_to "(more)", @article }) %>
       </div>
     
@@ -71,7 +71,7 @@
   
   <div class="col-lg-4">
     <div class="alert alert-warning">
-      <h4><i class="fa icon-calendar"></i> Activities</h4>
+      <h4><%= fa_icon "calendar" %> Activities</h4>
       <dl>
         <% @activities.each do |activity| %>
         <dt><%= activity.title %></dt>
@@ -80,7 +80,7 @@
       </dl>
     </div><!--/.well -->
     <div class="alert alert-success">
-      <h4><i class="fa fa-twitter"></i> Tweets</h4>
+      <h4><%= fa_icon "twitter" %> Tweets</h4>
       <% @tweets.each do |tweet| %>
       <blockquote>
         <p><%= auto_link HTMLEntities.new.decode(tweet.content), html: { target: '_blank' } %></p>
