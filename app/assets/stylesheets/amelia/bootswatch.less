@@ -39,6 +39,10 @@ blockquote {
   padding-left: 0;
 	border: 0;
 
+  p {
+    font-size: @baseFontSize;
+  }
+
 	&.pull-right {
 		border-right-color: lighten(#147E88, 12%);
 	}
@@ -104,13 +108,18 @@ hr {
 		font-size: 20pt;
 		font-weight: normal;
 	}
+  
+  .brand:hover {
+    background: @navbarLinkBackgroundHover;
+    color: @navbarLinkColorHover;
+  }
 
 	.nav > li > a {
     font-size: 18pt;
 		padding-top: 17px;
 		padding-bottom: 14px;
 		text-shadow: none;
-    height: 22px;
+    height: 25px;
     color: @navbarLinkColor !important;
 	}
 
@@ -120,7 +129,14 @@ hr {
 	}
 
 	.nav > li.active > a {
-    color: @navbarLinkColorActive !important;
+    background: transparent;
+    color: @navbarLinkColor !important;
+    text-decoration: underline !important;
+	}
+
+	.nav > li.active > a:hover {
+    color: @navbarLinkColorHover !important;
+    text-decoration: underline !important;
 	}
 
 	.nav > .active > a,
@@ -226,13 +242,6 @@ div.subnav {
 	.nav > li:first-child > a,
 	.nav > li:first-child > a:hover {
 		.border-radius(0);
-	}
-
-	.nav > .active > a {
-		background-color: rgba(255, 255, 255, 0.4);
-		border-color: transparent;
-		color: @textColor;
-		.box-shadow(none);
 	}
 
 	.nav > li > a:hover,
@@ -729,7 +738,7 @@ input, textarea, .search-query, .uneditable-input,
 
 .progress, .well, pre, code {
 	border-color: transparent;
-	.border-radius(0 0 15px 15px);
+	.border-radius(15px 15px 15px 15px);
 	.box-shadow(none);
 	text-shadow: none;
 }

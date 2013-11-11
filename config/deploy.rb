@@ -7,6 +7,7 @@ load "config/recipes/postgresql"
 load "config/recipes/nodejs"
 load "config/recipes/rails"
 load "config/recipes/rbenv"
+load "config/recipes/redis"
 load "config/recipes/check"
 #load "config/recipes/api_keys"
 

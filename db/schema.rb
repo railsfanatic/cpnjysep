@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109231922) do
+ActiveRecord::Schema.define(version: 20131111053420) do
 
   create_table "activities", force: true do |t|
     t.string   "title"
@@ -26,10 +26,12 @@ ActiveRecord::Schema.define(version: 20131109231922) do
     t.string   "title"
     t.string   "permalink"
     t.text     "content"
-    t.boolean  "published"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "published_at"
   end
+
+  add_index "articles", ["published_at"], name: "index_articles_on_published_at"
 
   create_table "grams", force: true do |t|
     t.string   "media_id"
@@ -40,6 +42,7 @@ ActiveRecord::Schema.define(version: 20131109231922) do
     t.datetime "updated_at"
     t.string   "low_res"
     t.string   "standard_res"
+    t.string   "thumbnail"
   end
 
   add_index "grams", ["created_at"], name: "index_grams_on_created_at"

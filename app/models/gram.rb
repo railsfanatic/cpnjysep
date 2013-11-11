@@ -14,6 +14,7 @@ class Gram < ActiveRecord::Base
           media_type: media.type,
           created_at: DateTime.strptime(media.created_time, '%s'),
           link: media.link,
+          thumbnail: media.images.thumbnail.url,
           low_res: media.images.low_resolution.url,
           standard_res: media.images.standard_resolution.url,
           caption: media.caption.try(:text)
