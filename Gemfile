@@ -16,7 +16,6 @@ gem 'awesome_print'
 
 gem 'therubyracer', platforms: :ruby
 gem 'less-rails'
-gem 'twitter-bootstrap-rails'
 gem 'cycle2-rails', git: 'git://github.com/thinkswan/cycle2-rails.git', branch: 'rails4'
 
 gem 'simple_form'
