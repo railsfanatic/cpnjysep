@@ -13,9 +13,13 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require jquery.cycle2
 //= require jquery.cycle2.carousel
 //= require jquery.cycle2.swipe
 //= require bootstrap-datepicker
+//= require wymeditor/jquery.wymeditor
+//= require wymeditor/jquery.browser
+//= require wymeditor/plugins/resizable/jquery.wymeditor.resizable
 //= require turbolinks
 //= require_tree

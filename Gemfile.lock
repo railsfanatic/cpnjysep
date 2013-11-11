@@ -6,6 +6,13 @@ GIT
       railties (>= 3.0)
 
 GIT
+  remote: git://github.com/VonD/wymeditor-rails.git
+  revision: f30c1b64873a9033ab1d29031af4bd8c0eddd74c
+  specs:
+    wymeditor-rails (1.0.0b3)
+      jquery-rails
+
+GIT
   remote: git://github.com/thinkswan/cycle2-rails.git
   revision: 287aadfd198805a8efd4c8edc593ae78f347fde5
   branch: rails4
@@ -97,6 +104,8 @@ GEM
     less-rails (2.4.2)
       actionpack (>= 3.1)
       less (~> 2.4.0)
+    less-rails-bootstrap (3.0.5)
+      less-rails (~> 2.4.2)
     libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -225,6 +234,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   less-rails
+  less-rails-bootstrap
   pg
   pry
   rails (= 4.0.1)
@@ -240,3 +250,4 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   whenever
+  wymeditor-rails!

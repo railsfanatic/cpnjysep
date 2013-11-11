@@ -9,7 +9,7 @@
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:permalink) %></th>
       <th><%= model_class.human_attribute_name(:content) %></th>
-      <th><%= model_class.human_attribute_name(:published) %></th>
+      <th><%= model_class.human_attribute_name(:published_at) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -21,7 +21,7 @@
         <td><%= article.title %></td>
         <td><%= article.permalink %></td>
         <td><%= article.content %></td>
-        <td><%= article.published %></td>
+        <td><%= article.published_at %></td>
         <td><%=l article.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
