@@ -33,6 +33,10 @@ gem 'redis_analytics'
 
 gem 'font-awesome-rails'
 
+gem 'devise'
+gem 'devise_invitable'
+gem 'omniauth-twitter'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

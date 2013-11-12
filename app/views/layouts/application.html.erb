@@ -33,25 +33,27 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Hello, UserName! <span class="caret"></span></a>
+            <% if user_signed_in? %>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><strong><%= current_user.email %>  <span class="caret"></span></strong></a>
               <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a tabindex="-1" href="#">Profile</a></li>
+                <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
                 <li class="divider"></li>
-                <li><a tabindex="-1" href="#">Logout</a></li>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
               </ul>
-            </li>
+            <% else %>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Sign In <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><%= link_to (fa_icon("twitter").html_safe + " Twitter"), "/auth/twitter" %></li>
+                <li><%= link_to (fa_icon("twitter").html_safe + " Twitter"), "/auth/twitter" %></li>
+              </ul>
+            <% end %>
+          </li>
           </ul>
-
         </div>
       </div>
     </nav>
-
-
     <div class="container">
-      
-      
       <%= yield %>
-
       <hr />
       <footer>
         <div class="row">
@@ -60,10 +62,7 @@
             &copy; 2013 Castle Pines Junior Youth Spiritual Empowerment Program
           </div>
         </div>
-        
       </footer>
-    
-
     </div>
   </body>
 </html>
